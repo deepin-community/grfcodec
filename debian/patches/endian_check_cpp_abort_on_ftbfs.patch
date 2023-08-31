@@ -1,0 +1,18 @@
+Description: Prevent infinite loop during build on endian_check failure
+Origin: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=922625
+Forwarded: https://github.com/OpenTTD/grfcodec/pull/1
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=922625
+
+Index: grfcodec/Makefile
+===================================================================
+--- grfcodec.orig/Makefile
++++ grfcodec/Makefile
+@@ -213,7 +213,7 @@ objs/$(ENDIAN_CHECK): src/endian_check.c
+ 
+ src/endian.h: objs/$(ENDIAN_CHECK)
+ 	$(_E) [ENDIAN] Determining endianness
+-	$(_C)objs/$(ENDIAN_CHECK) $(ENDIAN_PARAMS) > src/endian.h || rm src/endian.h
++	$(_C)objs/$(ENDIAN_CHECK) $(ENDIAN_PARAMS) > src/endian.h || { rm src/endian.h; exit 1; }
+ 
+ FORCE:
+ %_r: FORCE

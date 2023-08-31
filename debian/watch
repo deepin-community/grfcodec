@@ -1,0 +1,3 @@
+version=4
+
+https://www.openttd.org/downloads/grfcodec-releases/latest .*/grfcodec-(\d.*)-source\.(?:tgz|tbz2|txz|tar\.(?:gz|bz2|xz))

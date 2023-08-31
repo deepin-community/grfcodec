@@ -1,5 +1,186 @@
-template-repository (1.0-1) unstable; urgency=medium
+grfcodec (6.0.6-6) unstable; urgency=medium
 
-  * Initial release
+  [ Matthijs Kooijman ]
+  * [0353f34] Update watch file
+  * [5499e4d] Fix FTBFS with gcc-11 (Closes: #984158)
+  * [ef145c9] Bump standards version to 4.6.0 (no changes required)
+  * [f02a6aa] Update lintian override
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Jenkins ]
+  * [b26c412] Set upstream metadata fields: Bug-Database, Bug-Submit,
+    Repository, Repository-Browse.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 23 Nov 2021 12:14:35 +0100
+
+grfcodec (6.0.6-5) unstable; urgency=medium
+
+  * [99dfb79] Fix FTBFS with gcc-10 (Closes: 957307)
+  * [8fcd1da] Bump standards version to 4.5.0 (no changes required)
+  * [86688bd] Bump debhelper version to v13
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Wed, 12 Aug 2020 14:39:33 +0200
+
+grfcodec (6.0.6-4) unstable; urgency=medium
+
+  [ Jordi Mallach ]
+  * [454e069] Move M-A field to binary section
+  * [90e6e31] Set Rules-Requires-Root: no
+
+  [ Matthijs Kooijman ]
+  * [2a5a991] Support DEB_BUILD_OPTIONS=terse
+  * [44c66ad] Update Standards-Version to 4.3.0
+  * [14c98ae] Bump debhelper version to v12 (no changes required)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 15 Oct 2019 13:03:31 +0200
+
+grfcodec (6.0.6-3) unstable; urgency=medium
+
+  [ Jordi Mallach ]
+  * [e61a00b] Force build to abort upon endian_check failure. Thanks to
+    Helmut Grohne for suggesting this fix (Closes: #922625)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 12 Mar 2019 22:19:01 +0100
+
+grfcodec (6.0.6-2) unstable; urgency=medium
+
+  * [4dce67c] Bump debhelper version to v11
+  * [eca5421] Bump standards version to 4.1.4
+  * [8d4f2a1] Convert Priority: extra to optional
+  * [cda4980] Mark as Multi-arch: foreign
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 10 May 2018 21:42:34 +0200
+
+grfcodec (6.0.6-1) unstable; urgency=medium
+
+  * [dd04bd9] New upstream release 6.0.6.
+     - Fixes compilation with GCC 6 (Closes: #811833)
+  * [b5921f7] Bump debhelper version to v9.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Sun, 03 Jul 2016 10:49:04 +0200
+
+grfcodec (6.0.5-1) unstable; urgency=medium
+
+  * [994be47] Bump Standards-Version to 3.9.6, no changes required.
+  * [13c5839] New upstream release 6.0.5.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Sat, 09 May 2015 22:32:48 +0200
+
+grfcodec (6.0.4-1) unstable; urgency=medium
+
+  * [0d9b2c5] New upstream release 6.0.4.
+  * [d0bef6a] Bump Standards-Version to 3.9.5, no changes required.
+  * [25606fe] Remove fix-ldflags.patch, which was included upstream
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 22 Apr 2014 17:40:18 +0200
+
+grfcodec (6.0.3-1) unstable; urgency=low
+
+  * [b229ba6] New upstream release 6.0.3.
+     - Fixes crash on invalid input files. (Closes: #715995)
+  * [90ec679] Add patch to pass LDFLAGS for grfmrgc.bin
+  * [4979bd2] Use canonical Vcs urls (on anonscm.debian.org)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Wed, 18 Sep 2013 10:16:05 +0200
+
+grfcodec (6.0.2-1) unstable; urgency=low
+
+  * [664d753] New upstream release 6.0.2.
+  * [a52bd90] Bump Standards-Version to 3.9.4, no changes required.
+  * [a9ace4b] Make builds verbose.
+  * [3dad868] Update watch file, upstream changed download urls.
+  * [71790cd] Use flags from dpkg-buildflags.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Fri, 15 Mar 2013 16:03:42 +0100
+
+grfcodec (6.0.0-1) unstable; urgency=low
+
+  * [09f0358] New upstream release 6.0.0.
+  * [b47c90b] Update copyright file and convert to use the new copyright-
+    format-1.0.
+  * [ecf1baa] Bump Standars-Version to 3.9.3, no changes required.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Wed, 18 Apr 2012 13:01:58 +0200
+
+grfcodec (5.1.2-1) unstable; urgency=low
+
+  * [36684f3] New upstream release 5.1.2.
+  * [14174a4] Remove fix-action-14-big-endian.patch, which is included upstream.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 06 Dec 2011 14:43:46 +0100
+
+grfcodec (5.1.1-2) unstable; urgency=low
+
+  * [3ee0c62] Add fix-action-14-big-endian.patch.
+  * [45cdd2b] Reword description to comply with policy.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Fri, 05 Aug 2011 22:32:42 +0200
+
+grfcodec (5.1.1-1) unstable; urgency=low
+
+  * [a9f555f] New upstream release 5.1.1.
+  * [9227de5] Conflict and replace nforenum, which is included with grfcodec
+    now.
+  * [54aa8a6] Build-Depend on libpng-dev, to support png sprite sheets (new in
+    5.1.0).
+  * [90314ef] Remove big-endian-fix.patch, which was included upstream.
+  * [a08a5a1] Bump Standards-Version to 3.9.2, no changes required.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 04 Aug 2011 21:22:40 +0200
+
+grfcodec (1.0.0+debian1-2) unstable; urgency=low
+
+  * [148a2e3] Add big-endian-fix.patch, fixing grfcodec on s390.
+    (Closes: #596056)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Fri, 10 Sep 2010 18:20:12 +0200
+
+grfcodec (1.0.0+debian1-1) unstable; urgency=low
+
+  * [30caa6a] Repackaged upstream source, to remove a duplicate file (which
+    the lenny version of tar --keep-old-files doesn't like.
+  * [331d12b] Update watch file to upstream's new versioning scheme.
+  * [28b6b51] Mangle the +debian suffix in the watch file.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Mon, 23 Aug 2010 14:45:52 +0200
+
+grfcodec (1.0.0-1) unstable; urgency=low
+
+  * [bdf9657] New upstream release 1.0.0.
+  * [fd3f79e] Remove svn version mangling, upstream uses sane versioning
+    again.
+  * [8893585] Remove our manpages, upstream now provides them.
+  * [d023444] Bump Standards-Version to 3.9.1, no changes required.
+  * [911d6fe] Remove optional-upx.patch, which was included upstream.
+  * [5441697] Update upstream homepage.
+  * [bffa177] Build-Depend on libboost-dev, it is now required.
+  * [05e2298] Don't point users to the upstream homepage for docs.
+  * [various] Update packaging for upstream build system changes.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 19 Aug 2010 16:00:12 +0200
+
+grfcodec (0.9.10+svn2306-1) unstable; urgency=low
+
+  * [60e6925] New upstream release 0.9.10+svn2306.
+  * [61f5b99] Add optional-upx.patch, making upx compression optional.
+  * [d9464d5] Disable UPX binary compression, it is not available on all
+    platforms. (Closes: #576374)
+  * [27f8520] Don't Build-Depend on upx anymore.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Sun, 04 Apr 2010 14:11:22 +0200
+
+grfcodec (0.9.10+svn2294-1) unstable; urgency=low
+
+  * [af496d7] New upstream release 0.9.10+svn2294.
+  * [51e47c9] Remove patch gcc-4.4-compile-fixes, which was imported
+    upstream.
+  * [1f37c17] Update the watch file to the new upstream url scheme.
+  * [9c8d66d] Add some copyright holders I missed. - thanks to Alexander
+    Reichle-Schmehl
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 11 Mar 2010 17:20:42 +0100
+
+grfcodec (0.9.10+svn2247-1) unstable; urgency=low
+
+  * Initial release (Closes: #565392)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Mon, 01 Feb 2010 12:42:13 +0100
