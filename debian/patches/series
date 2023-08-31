@@ -1,0 +1,4 @@
+# Series of quilt patches
+endian_check_cpp_abort_on_ftbfs.patch
+gcc_10_ftbfs.patch
+gcc_11_data_naming_conflict_ftbfs.patch

@@ -1,0 +1,38 @@
+# It seems hardening-check triggers a false positive on nforenum. Even
+# with the hardening flags correctly passed, it outputs:
+#
+#        /usr/bin/grfcodec:
+#         Position Independent Executable: yes
+#         Stack protected: yes
+#         Fortify Source functions: yes (some protected functions found)
+#                unprotected: memset
+#                unprotected: strncpy
+#                unprotected: memcpy
+#                unprotected: fread
+#                unprotected: memmove
+#                unprotected: fgets
+#                protected: longjmp
+#                protected: printf
+#                protected: fprintf
+#                protected: vsprintf
+#                protected: snprintf
+#                protected: sprintf
+#         Read-only relocations: yes
+#         Immediate binding: yes
+#         Stack clash protection: unknown, no -fstack-clash-protection instructions found
+#         Control flow integrity: no, not found!
+#
+# Given that this warning only occurs for nforenum and not for the other
+# binaries in the package, and some functions are hardened, it seems the
+# hardening flags are properly applied but the nforenum binary does not
+# have any calls to library functions that would profit from hardening
+# (hardening-check can only do a heuristic, it cannot actually see if
+# the hardening flags were applied or if they should have been). Also,
+# lintian already says some functions (e.g. memcpy) are ignored due to
+# false positives, so this probably also applies for the functions
+# above.
+grfcodec binary: hardening-no-fortify-functions [usr/bin/nforenum]
+
+# This is a typo in a commandline option, so even when it is fixed, the
+# old name will probably be kept for compatibility
+grfcodec binary: spelling-error-in-binary usr/bin/nforenum extentions extensions
